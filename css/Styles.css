@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+
+    background-color: rgb(133, 173, 173) !important;
+    color:#000000 !important;
+
+}
+
+
+button {
+
+    float: right;
+    margin-right: 5%;
+
+}
+
+
+#CSS_Validator {
+
+    padding-left: 4%;
+    margin-top: 50%;
+
+}
+
+
+#CSS {
+
+    border:0;
+    width:88px;
+    height:31px;
+
+}
+
+
+div.adjust {
+
+    margin-bottom: 3px;
+    margin-top:20px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+
+div.container {
+
+    width: 100%;
+    height: 100%;
+    border:1em solid #404040;
+    position: absolute;
+
+}
+
+
+div.split {
+
+    box-sizing:border-box;
+    width:50%;
+    border:1em silver ridge;
+    float:left;
+    margin-top:2.5%;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 3px 0px 3px #888888;
+    height: 90%;
+
+}
+
+
+fieldset {
+
+    height:90%;
+    margin-left: 4%;
+    margin-top: 4%;
+    margin-right: 4%;
+    margin-bottom: 10px;
+    border: solid 1px black !important;
+    border-radius: 5px;
+    padding: 0 10px 10px 10px;
+    border-bottom: none;
+
+}
+
+
+#fieldset1 {
+
+    height:auto;
+
+}
+
+
+label {
+
+    width:80px;
+    clear:left;
+    text-align:left;
+    padding-right:10px;
+    float:left;
+
+}
+
+
+legend {
+
+    width: auto !important;
+    height: auto !important;
+    border: none;
+    font-size: 17px;
+
+}
+
+
+.Notes {
+
+    overflow:auto;
+    margin-bottom: 3px;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 85%;
+
+}
+
+
+table {
+
+    width: 100%;
+    table-layout:fixed;
+
+}
+
+
+td {
+
+    overflow: hidden;
+
+}
+
+
+th {
+
+    width: 50px;
+    background: black;
+    color: white;
+    border-color: white !important;
+
+}
+
+
+table, th, td {
+
+    text-align: center;
+    border: 1px solid black;
+
+}
