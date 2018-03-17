@@ -1,10 +1,10 @@
 <?php
 
-//Enabling strict typing feature.
-declare(strict_types = 1);
+// Enabling strict typing feature.
+declare(strict_types=1);
 
-//If the execution is not made via browser ( i.e. otherwise through PHP CLI).
-if (!isset($_SERVER["HTTP_HOST"])) {
+// If the execution is not made via browser ( i.e. otherwise through PHP CLI).
+if (!isset($_SERVER['HTTP_HOST'])) {
 
     include 'ProcessTable.php';
     require_once 'BuildTable.php';
@@ -13,18 +13,17 @@ if (!isset($_SERVER["HTTP_HOST"])) {
     $rows_parameter = $_POST['arg2'];
     $result = generateTable($rows_parameter, $columns_parameter);
 
-    //Use the ANSI escape sequences to control the colours on PHP CLI.
+    // Use the ANSI escape sequences to control the colours on PHP CLI.
     echo "\n\n" . chr(27) . "[30;103m" . "The Requested Table:" . chr(27)
     . "[0m\n\n";
 
     print_r($result);
-    exit();
-}
+    exit(0);
 
-//Otherwise, if the execution is made through browser.
-else {
+    // Otherwise, if the execution is made through browser,
+} else {
 
-    //Start the session for HTML version.
+    // Start the session for HTML version.
     session_start();
 
 }
@@ -46,22 +45,22 @@ else {
 
         <div class="container">
 
-            <div class= "split" id="left">
+            <div class="split" id="left">
 
-                <form name = "creation" id = "creation" 
-                      action = "ProcessTable.php" method = "post">
+                <form name="creation" id="creation" 
+                      action="ProcessTable.php" method="post">
 
                     <fieldset>
                         <legend><b> Table Customisation </b></legend>
 
                         <div class="form-group adjust">
                             <label for="width">Columns:</label>
-                            <input type = "text" name = "width" id = "width"/>
+                            <input type="text" name="width" id="width"/>
                         </div>
 
                         <div class="form-group adjust">
                             <label for="height">Rows: </label>
-                            <input type = "text" name = "height" id = "height"/>
+                            <input type="text" name="height" id="height"/>
                         </div>
 
                         <button type="submit" class="btn btn-success" 
@@ -85,7 +84,7 @@ else {
             </div>
 
 
-            <div class= "split">
+            <div class="split">
 
                 <fieldset>
                     <legend><b>Result</b></legend>
@@ -93,18 +92,20 @@ else {
                     <div class="Notes">
 
                         <?php
-                        echo '<pre>';
 
-                        echo nl2br("The Requested Table:\n\n");
-                        print_r($_SESSION['result']);
+                        echo "<pre>";
 
-                        echo '</pre>';
+                            echo nl2br("The Requested Table:\n\n");
+                            print_r($_SESSION['result']);
 
-                        //Unregister all session variables.
+                        echo "</pre>";
+
+                        // Unregister all session variables.
                         session_unset();
 
-                        /*Destroys all of the data associated
-                         * with the current session.
+                        /**
+                         * Destroys all of the data associated
+                         *  with the current session.
                          */
                         session_destroy();
                         ?>
